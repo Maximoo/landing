@@ -35,19 +35,9 @@
                 width: 100%;
             }
             &__first{
-                background: #000;
-                background: linear-gradient(0deg, #6184ac 0%, #000 100%);
-                background-image: url(#{$image-path}/bg-sky.jpg);
-                background-position: bottom;
-                height: 8800px;
-                @media (min-width: $page-width) {
-                    background-size: 100% 100%;
-                }
-            }
-            &__mid{
-                background: #91a1b0;
-                background: linear-gradient(0deg, #91a1b0 0%, #739acd 45%, #6184ac 100%);
-                min-height: 100px;
+                background: color(port);
+                background: linear-gradient(0deg, color(sky) 0%, #03396c 40%, color(port) 70%);
+                min-height: 2000px;
                 flex-grow: 1;
             }
             &__last, &__area{
@@ -63,9 +53,89 @@
                 }
             }
             &__last{
-                background: #91a1b0;
-                background: linear-gradient(0deg, #7f792a 0%, #91a1b0 100%);
-                background-image: url(#{$image-path}/bg-land.jpg);
+                background: color(sky);
+
+                div {
+                    position: absolute;
+                    box-sizing: border-box;
+                }
+
+                overflow: hidden;
+                position: relative;
+                
+                .sky {
+                    width: 100%;
+                    height: 100%;
+                    background-color: color(sky);
+                }
+
+                .ground.first {
+                    width: 110%;
+                    height: 40%;
+                    bottom: 0;
+                    background-color: color(ground-one);
+                }
+
+                .ground.second {
+                    width: 140%;
+                    height: 25%;
+                    bottom: 0;
+                    left: -10%;
+                    background-color: color(ground-two);
+                    transform: rotateZ(5deg);
+                }
+
+                .ground.third {
+                    width: 140%;
+                    height: 20%;
+                    bottom: -5%;
+                    left: -10%;
+                    background-color: color(ground-three);
+                    transform: rotateZ(-5deg);
+                }
+
+                .tree.one {
+                    width: 5vmin;
+                    height: 15vmin;
+                    bottom: 100%;
+                    left: 20%;
+                }
+
+                .tree.two {
+                    bottom: 100%;
+                    left: 30%;
+                    width: 5vmin;
+                    height: 20vmin;
+                }
+
+                .tree .body {
+                    display: block;
+                    width: 100%;
+                    height: 90%;
+                    background: color(tree-crown);
+                    border-radius: 100% 100% 100% 100%/100% 100% 50% 50%;
+                    box-shadow: inset 1.5vmin -0.5vmin darken(color(tree-crown),3);
+                }
+
+                .tree .trunk {
+                    width: 13%;
+                    height: 10%;
+                    background: color(tree-trunk);
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .tree .shadow {
+                    width: 50%;
+                    height: 200%;
+                    background: rgba(0, 0, 0, 0.5);
+                    border-radius: 50%;
+                    transform: rotateZ(-104deg);
+                    transform-origin: bottom center;
+                    left: -7%;
+                    bottom: -7%;
+                }
             }
             &__ray{
                 position: absolute;

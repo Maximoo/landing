@@ -162,7 +162,7 @@
         sliders = {
           sliders: {
             $feat: $('.i-feat__inner'),
-            $gestion: $('.i-section--gestion')
+            $grenade: $('.i-section--grenade')
           },
           events: $({}),
           on: function(event, call){ this.events.on(event, call); },
@@ -224,7 +224,7 @@
             });
 
             var slick_flag = false;
-            this.sliders.$gestion.on('init breakpoint', function(event, slick){
+            this.sliders.$grenade.on('init breakpoint', function(event, slick){
               if ( ! slick_flag ) {
                 slick_flag = true;
                 slick.slickUnfilter();

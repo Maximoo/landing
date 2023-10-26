@@ -19,6 +19,6 @@
     }
   },
   "config": {
-    "devUrl": "http://localhost/insurtech"
+    "devUrl": "http://localhost/landing"
   }
 }

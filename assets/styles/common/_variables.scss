@@ -24,7 +24,7 @@ $font-path: 		"../fonts/";
 $image-path:		"../images/";
 
 $fonts:(
-	avenir: 	'AvenirLTS'
+	avenir: 	'Noto Sans Mono'
 );
 
 $font-serif:    	'Sans-Serif, serif';
@@ -41,12 +41,20 @@ $font-weights:(
 );
 
 $brand-colors:(
-	aqua: 			#f8fbfb,
-	blue: 			#81bed2,
-	green: 			#7bb5b2,
-	space: 			#1a204e,
+	aqua: 			#dde7ee,
+	blue: 			#81a5ba,
+	cornflower: 	#89BFBE,
+	space: 			#323456,
+	port: 			#011f4b,
 	dark: 			#000,
-	light: 			#fff
+	light: 			#fff,
+
+	sky: 			#6184ac,
+	ground-one: 	#C9BE20,
+	ground-two: 	#C1B726,
+	ground-three: 	#CCAD33,
+	tree-crown: 	#1b771b,
+	tree-trunk: 	#484444
 );
 
 $alt-colors:(
@@ -67,7 +75,7 @@ $theme-colors:(
 	bullet: 		color(space),
 	text-dark: 		color(space),
 	title: 			color(blue),
-	card: 			color(green),
+	card: 			color(cornflower),
 	card-contrast: 	color(light),
 	card-secondary: color(aqua),
 	card-text: 		color(space),
